@@ -20,7 +20,8 @@ function EditKegForm (props) {
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleEditKegFormSubmission}
-        buttonText="Update that keg!" />
+        buttonText="Update that keg!"
+        headerText="Redefine this brew!" />
     </React.Fragment>
   );
 }

@@ -6,7 +6,7 @@ function ReusableForm(props) {
   return (
     <React.Fragment>
       <div className="row">
-        <h3 className="tapListHeader">Tap a new brew!</h3>
+        <h3 className="tapListHeader">{props.headerText}</h3>
         <div className="col-6">
           <form onSubmit={props.formSubmissionHandler} className="form-control">
             <label for='name' className="form-label">Brew Name</label>

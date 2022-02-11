@@ -20,7 +20,8 @@ function NewKegForm(props){
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleNewKegFormSubmission}
-        buttonText="Tap that keg!!" />
+        buttonText="Tap that keg!!" 
+        headerText="Tap a new brew!"/>
     </React.Fragment>
   );
 }
