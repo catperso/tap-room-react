@@ -31,3 +31,10 @@
   margin: 5px;
   width: 10em;
 }
+
+.kegTapping {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
