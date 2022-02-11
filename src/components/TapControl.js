@@ -52,6 +52,17 @@ class TapControl extends React.Component {
     this.setState({mainTapList: editedMainTapList, editing: false, selectedKeg: null});
   }
 
+  handlePintClick = () => {
+    const thisKeg = this.state.selectedKeg;
+    const pouredKeg = { name: thisKeg.name, 
+                        brand: thisKeg.brand, 
+                        price: thisKeg.price, 
+                        alcoholContent: thisKeg.alcoholContent, 
+                        pintsRemaining: thisKeg.pintsRemaining -= 1, 
+                        id: thisKeg.id}
+    this.handleEditingKegInList(pouredKeg);
+  }
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -60,7 +71,10 @@ class TapControl extends React.Component {
       currentlyVisibleState = <EditKegForm keg = {this.state.selectedKeg} onEditKeg = {this.handleEditingKegInList} />;
       buttonText = 'Cancel edit and return to the Taplist';
     } else if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingDelete = {this.handleDeletingKeg} onClickingEdit = {this.handleEditClick} />;
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} 
+                                        onClickingDelete = {this.handleDeletingKeg} 
+                                        onClickingEdit = {this.handleEditClick}
+                                        onClickingPint = {this.handlePintClick} />;
       buttonText = 'View all taps';
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
