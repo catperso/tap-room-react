@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 function KegDetail(props){
   const { keg, onClickingDelete } = props;
+  let disabled = false;
+  if (keg.pintsRemaining === 0) disabled = true;
 
   return (
     <React.Fragment>
@@ -10,8 +12,8 @@ function KegDetail(props){
       <h3><strong>{props.keg.name}</strong> - from <em>{keg.brand}</em></h3>
       <p><em>{props.keg.alcoholContent}% ABV</em> - ${keg.price}/pint</p>
       <p>{props.keg.pintsRemaining} pints left!</p>
-      <button onClick={ props.onClickingPint } className="btn btn-success">Pour me a glass!</button>
-      <button onClick={ props.onClickingEdit } className="btn btn-warning">Edit this keg!</button>
+      <button onClick={ props.onClickingPint } className="btn btn-success" disabled={disabled}>Pour me a glass!</button>
+      <button onClick={ props.onClickingEdit } className="btn btn-warning" disabled={disabled}>Edit this keg!</button>
       <button onClick={()=> onClickingDelete(keg.id) } className="btn btn-danger">Throw this keg out!</button>
       <hr/>
     </React.Fragment>
