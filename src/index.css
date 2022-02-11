@@ -25,3 +25,9 @@
 .kegEmpty {
   filter: grayscale(100%);
 }
+
+.pintPic {
+  float: left;
+  margin: 5px;
+  width: 10em;
+}

@@ -20,7 +20,7 @@ function Keg(props){
         <h3><strong>{props.name}</strong> - from <em>{props.brand}</em></h3>
         <p><em>{props.alcoholContent}% ABV</em> - ${props.price}/pint</p>
         <p>{props.pintsRemaining} pints left!</p>
-        <p>{kegFullnessMessage}</p>
+        <p><strong>{kegFullnessMessage}</strong></p>
         <hr/>
       </div>
     </React.Fragment>
