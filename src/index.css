@@ -12,3 +12,16 @@
 .tapListHeader {
   text-align: center;
 }
+
+.kegIcon {
+  float: left;
+  margin: 5px;
+}
+
+.kegLow {
+  filter: hue-rotate(40deg);
+}
+
+.kegEmpty {
+  filter: grayscale(100%);
+}
