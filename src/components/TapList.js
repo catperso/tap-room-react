@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 function TapList(props){
   return (
     <React.Fragment>
+      <br/>
+      <h2 className="tapListHeader"><em>Select a keg from which to grab a drink!</em></h2>
       <hr/>
       {props.tapList.map((keg) =>
         <Keg 

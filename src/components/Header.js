@@ -3,7 +3,8 @@ import React from "react";
 function Header() {
   return (
     <div className="jumbotron">
-      <h1>Welcome to I'D TAP THAT Taproom!</h1>
+      <p><em>Welcome to</em></p>
+      <h1>I'D TAP THAT!</h1>
     </div>
   );
 }
