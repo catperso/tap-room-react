@@ -12,9 +12,9 @@ function NewKegForm(props){
       brand: event.target.brand.value, 
       price: event.target.price.value, 
       alcoholContent: event.target.alcoholContent.value,
-      pintsRemaining: 12,
+      pintsRemaining: 124,
       id: v4()});
-    } // BEFORE COMPLETION EDIT PINTSREMAINING TO 124 INSTEAD OF 10
+    }
 
   return (
     <React.Fragment>

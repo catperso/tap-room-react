@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className="jumbotron">
       <p><em>Welcome to</em></p>
-      <h1>I'D TAP THAT!</h1>
+      <h1>TAP THAT!</h1>
     </div>
   );
 }
