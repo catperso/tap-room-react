@@ -16,7 +16,7 @@
 ## Component Diagram
 
 <p align="center">
-<img src="/src/img/component-diagram.png" height="382px">
+<img src="\src\img\component-diagram.png" height="382px">
 </p>
 
 ## Description
