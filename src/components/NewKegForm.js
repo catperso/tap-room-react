@@ -8,10 +8,10 @@ function NewKegForm(props){
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
     props.onNewKegCreation({
-      name: event.target.name.value, 
-      brand: event.target.brand.value, 
-      price: event.target.price.value, 
-      alcoholContent: event.target.alcoholContent.value,
+      name: event.target.name.value || "Unnamed", 
+      brand: event.target.brand.value || "No brewery listed", 
+      price: parseInt(event.target.price.value), 
+      alcoholContent: parseInt(event.target.alcoholContent.value),
       pintsRemaining: 124,
       id: v4()});
     }

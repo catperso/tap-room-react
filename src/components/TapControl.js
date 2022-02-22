@@ -49,7 +49,7 @@ class TapControl extends React.Component {
 
   handleEditingKegInList = (kegToEdit) => {
     const editedMainTapList = this.state.mainTapList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(kegToEdit);
-    this.setState({mainTapList: editedMainTapList, editing: false, selectedKeg: null});
+    this.setState({mainTapList: editedMainTapList, editing: false, selectedKeg: editedMainTapList.filter(keg => keg.id === kegToEdit.id)[0]});
   }
 
   handlePintClick = () => {

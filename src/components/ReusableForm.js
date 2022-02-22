@@ -9,26 +9,26 @@ function ReusableForm(props) {
         <h3 className="tapListHeader">{props.headerText}</h3>
         <div className="col-6">
           <form onSubmit={props.formSubmissionHandler} className="form-control">
-            <label for='name' className="form-label">Brew Name</label>
+            <label className="form-label">Brew Name</label>
             <input
               className="form-control"
               type='text'
               name='name'
               placeholder='Name Of Brew' />
-            <label for='brand' className='form-label'>Brewery Name</label>
+            <label className='form-label'>Brewery Name</label>
             <input
               className="form-control"
               type='text'
               name='brand'
               placeholder='Brewery' />
-            <label for="price" className="form-label">Price per Pint</label>
+            <label className="form-label">Price per Pint</label>
             <input
               className="form-control"
               type='number'
               name='price'
               min="0"
               placeholder='$$$' />
-            <label for="alcoholContent" className="form-label">Alcohol Percentage</label>
+            <label className="form-label">Alcohol Percentage</label>
             <input
               className="form-control"
               type='number'
